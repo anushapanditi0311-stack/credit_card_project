@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Approval Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Credit Card Eligibility Predictor</h2>
+        <form id="predictionForm">
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+
+            <label for="own_car">Owns a Car?</label>
+            <select id="own_car" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="own_realty">Owns Real Estate / Property?</label>
+            <select id="own_realty" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="children">Number of Children:</label>
+            <input type="number" id="children" min="0" value="0" required>
+
+            <label for="income">Annual Income ($):</label>
+            <input type="number" id="income" min="0" required>
+
+            <label for="income_type">Income Type:</label>
+            <select id="income_type" required>
+                <option value="4">Working</option>
+                <option value="0">Commercial associate</option>
+                <option value="1">Pensioner</option>
+                <option value="2">State servant</option>
+                <option value="3">Student</option>
+            </select>
+
+            <label for="education">Highest Education Level:</option>
+            <select id="education" required>
+                <option value="4">Secondary / secondary special</option>
+                <option value="1">Higher education</option>
+                <option value="2">Incomplete higher</option>
+                <option value="3">Lower secondary</option>
+                <option value="0">Academic degree</option>
+            </select>
+
+            <label for="family_status">Family Status:</label>
+            <select id="family_status" required>
+                <option value="1">Married</option>
+                <option value="3">Single / not married</option>
+                <option value="0">Civil marriage</option>
+                <option value="2">Separated</option>
+                <option value="4">Widow</option>
+            </select>
+
+            <label for="housing_type">Housing Type:</label>
+            <select id="housing_type" required>
+                <option value="1">House / apartment</option>
+                <option value="5">With parents</option>
+                <option value="2">Municipal apartment</option>
+                <option value="4">Rented apartment</option>
+                <option value="3">Office apartment</option>
+                <option value="0">Co-op apartment</option>
+            </select>
+
+            <label for="occupation">Occupation Type:</label>
+            <select id="occupation" required>
+                <option value="18">Unknown</option>
+                <option value="8">Laborers</option>
+                <option value="3">Core staff</option>
+                <option value="14">Sales staff</option>
+                <option value="10">Managers</option>
+                <option value="4">Drivers</option>
+                <option value="6">High skill tech staff</option>
+            </select>
+
+            <label for="family_size">Family Size:</label>
+            <input type="number" id="family_size" min="1" value="1" required>
+
+            <label for="age">Age (Years):</label>
+            <input type="number" id="age" min="18" max="100" required>
+
+            <label for="years_employed">Years Employed:</label>
+            <input type="number" id="years_employed" min="0" step="0.1" value="0" required>
+
+            <label for="unemployed">Is Unemployed?</label>
+            <select id="unemployed" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <button type="submit">Predict Eligibility</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
